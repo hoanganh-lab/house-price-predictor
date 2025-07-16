@@ -24,11 +24,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build Docker image
-        run: |
-          docker build -t mlflow-tracking-server .
-
-      - name: Push Docker image to registry
-        run: |
-          docker tag mlflow-tracking-server ghcr.io/yourusername/mlflow-tracking-server:latest
-          docker push ghcr.io/yourusername/mlflow-tracking-server:latest
+      
